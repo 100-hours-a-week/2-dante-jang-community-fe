@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <link rel="stylesheet" href="/layouts/Header/style.css" />
+  </head>
+  <div class="header">
+    <div class="header-wrapper">
+      <div class="header-left">
+        <span class="nav-text"> Community </span>
+      </div>
+      <div class="header-right">
+        <div id="side-navigation" class="side-navigation hidden">
+          <span class="side-nav-text" id="login-status"></span>
+          <span
+            class="side-nav-text hidden"
+            id="logout-status"
+            onclick="logout()"
+            >로그아웃</span
+          >
+          <span class="side-nav-text" onclick="settings()">설정</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

@@ -1,0 +1,69 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #ffffff;
+    box-shadow: 0 0 3px #000000;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 10vw;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-text {
+    margin-left: 2.5vw;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    background-image: url(/assets/image/default-profile-image-dark.png);
+}
+
+.hamburger-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    background-image: url(/assets/image/hamburger.png);
+}
+
+.side-navigation {
+    position: absolute;
+    top: 65px;
+    right: calc(10vw - 5px);
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.side-nav-text {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
