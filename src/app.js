@@ -16,6 +16,10 @@ app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "login", "index.html"));  // index.html 파일 경로
 });
 
+app.get("/sign-up", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "signup", "index.html"));  // index.html 파일 경로
+});
+
 app.listen(PORT, () => {
   console.log(`Frontend server running on http://localhost:${PORT}`);
 });
