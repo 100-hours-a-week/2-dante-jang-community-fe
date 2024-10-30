@@ -45,6 +45,13 @@
     background-size: 100% 100%;
     background-image: url(/assets/image/hamburger.png);
 }
+#profile-image {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+}
 
 .side-navigation {
     position: absolute;

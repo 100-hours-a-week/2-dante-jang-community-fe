@@ -15,7 +15,7 @@ function includeHTML() {
                 element.innerHTML = data;
                 // 로드 후, 특정 초기화 함수가 필요하면 아래에서 호출 가능
                 if (element.classList.contains("header-wrap")) {
-                    initializeSideNavigation(); // 예시: 헤더일 경우 사이드 내비게이션 초기화
+                    checkLoginStatus(); // 예시: 헤더일 경우 사이드 내비게이션 초기화
                 }
             })
             .catch(error => {
