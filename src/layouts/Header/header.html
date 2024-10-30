@@ -9,18 +9,14 @@
   <div class="header">
     <div class="header-wrapper">
       <div class="header-left">
-        <span class="nav-text"> Community </span>
+        <span class="nav-text" onclick="location.href='/'"> Community </span>
       </div>
       <div class="header-right">
+        <img id="profile-image" src="/assets/image/hamburger.png" alt="Profile" class="profile-img" onclick="toggleSideNav()" />
         <div id="side-navigation" class="side-navigation hidden">
           <span class="side-nav-text" id="login-status"></span>
-          <span
-            class="side-nav-text hidden"
-            id="logout-status"
-            onclick="logout()"
-            >로그아웃</span
-          >
           <span class="side-nav-text" onclick="settings()">설정</span>
+          <span class="side-nav-text hidden" id="logout-status" onclick="logout()">로그아웃</span>
         </div>
       </div>
     </div>

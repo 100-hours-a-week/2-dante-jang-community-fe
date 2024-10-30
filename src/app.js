@@ -1,8 +1,11 @@
 const express = require("express");
 const path = require("path");
+const cors = require('cors');
 
 const app = express();
 const PORT = 8080;
+
+app.use(cors());
 
 // 정적 파일 경로 설정
 app.use(express.static(path.join(__dirname)));  // src 디렉토리를 정적 파일로 제공
