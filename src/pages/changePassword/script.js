@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         try {
-            const response = await fetch('http://localhost:9000/user/change-password', {
+            const response = await fetch('http://cummnity-study.duckdns.org:9000/user/change-password', {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

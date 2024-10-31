@@ -30,6 +30,10 @@ app.get("/change-password", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "changePassword", "index.html"));
 });
 
+app.get("/write-post", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "writePost", "index.html"));
+});
+
 app.listen(PORT, () => {
   console.log(`Frontend server running on http://localhost:${PORT}`);
 });

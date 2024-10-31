@@ -15,7 +15,7 @@ document
 
     try {
       const response = await axios.get(
-        `http://localhost:9000/user/check-email?email=${email}`
+        `http://cummnity-study.duckdns.org:9000/user/check-email?email=${email}`
       );
       if (!response.data.isDuplicated) {
         emailSuccess.textContent = "사용 가능한 이메일입니다.";
@@ -86,14 +86,14 @@ document
 
     if (isValid) {
       try {
-        const response = await axios.post("http://localhost:9000/user", {
+        const response = await axios.post("http://cummnity-study.duckdns.org:9000/user", {
           name,
           email,
           password,
           confirmPassword
         });
         alert("회원가입이 완료되었습니다!");
-        // 회원가입 성공 후 처리 (예: 로그인 페이지로 리다이렉트)
+        window.location.href = '/login';
       } catch (error) {
         alert("회원가입 중 오류가 발생했습니다. 다시 시도해주세요.");
         console.error("회원가입 오류:", error);

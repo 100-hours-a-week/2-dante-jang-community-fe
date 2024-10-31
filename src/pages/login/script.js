@@ -10,7 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     errorElement.textContent = '';
 
     try {
-        const response = await axios.post('http://localhost:9000/user/login', {
+        const response = await axios.post('http://cummnity-study.duckdns.org:9000/user/login', {
             email,
             password
         });

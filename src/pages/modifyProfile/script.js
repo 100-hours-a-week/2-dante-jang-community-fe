@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function fetchUserData() {
         try {
-            const response = await fetch('http://localhost:9000/user', {
+            const response = await fetch('http://cummnity-study.duckdns.org:9000/user', {
                 method: 'GET',
                 credentials: 'include'
             });
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function deleteUser() {
         try {
-            const response = await fetch('http://localhost:9000/user', {
+            const response = await fetch('http://cummnity-study.duckdns.org:9000/user', {
                 method: 'DELETE',
                 credentials: 'include'
             });
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         try {
-            const response = await fetch('http://localhost:9000/user', {
+            const response = await fetch('http://cummnity-study.duckdns.org:9000/user', {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

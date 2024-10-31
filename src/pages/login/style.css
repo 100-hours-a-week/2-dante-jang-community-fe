@@ -60,3 +60,17 @@ button:hover {
         padding: 1.5rem;
     }
 }
+
+.signup-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s;
+}
+.signup-link a:hover {
+    color: #0056b3;
+}
