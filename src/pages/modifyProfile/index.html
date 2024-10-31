@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modify Profile</title>
+    <!-- CSS 파일 불러오기 -->
+    <link rel="stylesheet" href="/pages/modifyProfile/style.css" />
+  </head>
+  <body>
+    <header
+      data-include-file="/layouts/Header/header.html"
+      class="header-wrap includeJs"
+    ></header>
+
+    <div class="container">
+      <div class="profile-section">
+        <h2>회원정보수정</h2>
+        <div class="profile-image">
+          <img id="profile-image" src="/placeholder.svg?height=100&width=100" alt="프로필 사진" />
+        </div>
+      </div>
+
+      <form id="profileForm">
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <div id="email-display"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="name">닉네임</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+          />
+        </div>
+
+        <button type="submit" class="button button-primary">수정하기</button>
+        <button type="button" class="button button-leave" id="leaveButton">탈퇴하기</button>
+
+        <div id="successMessage" class="button button-success" style="display: none;">수정 완료</div>
+      </form>
+    </div>
+
+    <div class="modal" id="leaveModal">
+      <div class="modal-content">
+        <h3>회원탈퇴를 하시겠습니까?</h3>
+        <p>작성한 게시글과 댓글은 삭제됩니다.</p>
+        <div class="modal-buttons">
+          <button class="button button-cancel" id="cancelLeave">취소</button>
+          <button class="button button-primary" id="confirmLeave">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS 파일 불러오기 -->
+    <script src="/pages/modifyProfile/script.js"></script>
+    <script src="/utils/include.js"></script>
+    <script src="/layouts/Header/script.js"></script>
+  </body>
+</html>
