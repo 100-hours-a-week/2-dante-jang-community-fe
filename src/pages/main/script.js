@@ -38,15 +38,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
-        return date.toLocaleString('ko-KR', {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: false
-        }).replace(/\./g, '-');
+    
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+    
+        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
     }
 
     async function fetchPosts() {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <time datetime="${post.writed_at}">${formatDate(post.writed_at)}</time>
                     </div>
                     <div class="post-author">
-                        <img src="${post.image_url || '/path/to/default-avatar.png'}" alt="Author Image">
+                        <img src="${post.image_url || '/assets/image/default-profile-image-dark.png'}" alt="Author Image">
                         <span>${post.user_name}</span>
                     </div>
                 `;

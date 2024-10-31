@@ -34,6 +34,10 @@ app.get("/write-post", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "writePost", "index.html"));
 });
 
+app.get("/post", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "postDetail", "index.html"));
+});
+
 app.listen(PORT, () => {
   console.log(`Frontend server running on http://localhost:${PORT}`);
 });
