@@ -35,7 +35,7 @@ function createPostHTML(post) {
                     </div>
                     ${post.isMyPost ? `
                         <div class="action-buttons">
-                            <button class="btn edit-btn">수정</button>
+                            <button class="btn edit-btn" onclick="window.location.href='/modify-post?postId=${post.post_id}'">수정</button>
                             <button class="btn delete-btn">삭제</button>
                         </div>
                     ` : ''}

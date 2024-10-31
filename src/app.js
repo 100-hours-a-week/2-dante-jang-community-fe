@@ -38,6 +38,10 @@ app.get("/post", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "postDetail", "index.html"));
 });
 
+app.get("/modify-post", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "modifyPost", "index.html"));
+});
+
 app.listen(PORT, () => {
   console.log(`Frontend server running on http://localhost:${PORT}`);
 });
