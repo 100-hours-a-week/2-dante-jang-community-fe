@@ -7,7 +7,7 @@ async function checkLoginStatus() {
   try {
     const response = await fetch('http://localhost:9000/user', {
       method: 'GET',
-      credentials: 'include' // 쿠키 포함 요청
+      credentials: 'include'
     });
 
     if (response.ok) {
@@ -38,13 +38,14 @@ function initializeSideNavigation() {
 
   // 로그인 상태에 따라 login-status 텍스트 변경
   const loginStateBtn = document.getElementById("login-status");
-  loginStateBtn.textContent = isLogin ? "마이페이지" : "로그인";
+  loginStateBtn.textContent = isLogin ? "회원정보수정" : "로그인";
   loginStateBtn.onclick = () => {
-    window.location.href = isLogin ? "/my-page" : "/login";
+    window.location.href = isLogin ? "/modify-profile" : "/login";
   };
 
   if (isLogin) {
     document.getElementById("logout-status").classList.toggle("hidden", false);
+    document.getElementById("change-password").classList.toggle("hidden", false);
   }
 
   // 외부 클릭으로 사이드 내비게이션 닫기
