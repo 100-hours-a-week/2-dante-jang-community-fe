@@ -5,7 +5,7 @@ const defaultProfileImage = "/assets/image/default-profile-image-dark.png";
 async function checkLoginStatus() {
 
   try {
-    const response = await fetch('http://localhost:9000/user', {
+    const response = await fetch('http://cummnity-study.duckdns.org:9000/user', {
       method: 'GET',
       credentials: 'include'
     });
@@ -70,7 +70,7 @@ async function logout() {
   console.log("Logging out...");
 
   try {
-    const response = await fetch("http://localhost:9000/user/logout", {
+    const response = await fetch("http://cummnity-study.duckdns.org:9000/user/logout", {
       method: "POST",
       credentials: "include", // 쿠키를 포함하여 요청
       headers: {
