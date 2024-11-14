@@ -20,30 +20,49 @@
     align-items: center;
 }
 
-.nav-text {
-    margin-left: 2.5vw;
-    font-size: 1.2rem;
-    font-family: sans-serif;
-    font-weight: bold;
+.logo {
     cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .profile-icon {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    background-position: 50% 50%;
-    background-size: 100% 100%;
-    background-image: url(/assets/image/default-profile-image-dark.png);
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.profile-icon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .hamburger-icon {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    background-position: 50% 50%;
+    border: none;
+    background-color: transparent;
     background-size: 100% 100%;
-    background-image: url(/assets/image/hamburger.png);
+    background-position: 50% 50%;
+    background-image: url(../../assets/image/hamburger.png);
 }
 
 .side-navigation {
@@ -62,8 +81,30 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
-.hidden {
-    display: none;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.header-write-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-right: 1rem;
+}
+
+.header-write-button:hover {
+    color: #007bff;
+}
+
+.header-write-icon {
+    margin-right: 5px;
+    font-size: 18px;
 }
